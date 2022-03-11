@@ -126,7 +126,7 @@ El esqueleto generado por **express** tiene algunos elementos que no queremos us
 Concretamente vamos a eliminar el recurso **user** creado por el esqueleto. 
 Este recurso podría ser el paso inicial para completar un servicio de gestión de usuarios, pero de momento no nos interesa y vamos a borrarlo.
 
-* Eliminar las rutas de user: El esqueleto creó el fichero **routes/users.js** con las definiciones de las rutas de usuarios. El alumno de borrar este fichero.
+* Eliminar las rutas de user: El esqueleto creó el fichero **routes/users.js** con las definiciones de las rutas de usuarios. El alumno debe borrar este fichero.
 * El fichero **routes/users.js** se carga y usa en **app.js**. El alumno debe buscar y eliminar las referencias a **routes/users.js**. Son las siguientes sentencias de app.js:
 
 ```
