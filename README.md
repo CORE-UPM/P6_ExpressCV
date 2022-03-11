@@ -85,7 +85,7 @@ El servidor lanzado atiende las peticiones en el puerto **3000**. Hay que ejecut
 
 Cada vez que se modifica algún fichero (javascript) de nuestro proyecto, hay que detener el servidor y relanzarlo para los nuevos cambios se apliquen. 
 Para no tener que hacer este proceso manualmente, pueden instalarse programas que lo hacen automáticamente por nosotros (**forever**, **supervisor**, ...). 
-Estos programa vigilan los ficheros de nuestra aplicación, y si detectan que hay cambios, detienen la aplicación y la relanzan de nuevo.
+Estos programas vigilan los ficheros de nuestra aplicación, y si detectan que hay cambios, detienen la aplicación y la relanzan de nuevo.
 
 El alumno debe usar **supervisor**. Para instalarlo debe ejecutar el siguiente comando en el terminal estando en el directorio `blog`
 
