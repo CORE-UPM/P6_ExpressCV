@@ -173,6 +173,7 @@ Esta página debe utilizar las marcas de HTML5 habituales:
 
 - **\<header\>**: cabecera donde se suele incluir el nombre del portal.
 - **\<nav\>**: barra de navegación con los botones para solicitar las vista que se desea ver.
+- **\<main\>**: contenido principal de la página.
 - **\<footer\>**: pié de página.
 
 El fichero **views/layout.ejs** debe incluir la sentencia **\<%- body %\>** en el punto donde se va a insertar la vista a mostrar (el método **res.render** asigna el código HTML de la vista a la variable **body**).
