@@ -60,6 +60,16 @@ describe("Tests Práctica 6", function() {
             await server.kill();
         })
 
+        scored(`Comprobar que se han creado los ficheros pedidos en el enunciado`, -1, async function () {
+            this.msg_ok = 'Se han encontrado los ficheros pedidos';
+            this.msg_err = 'No se ha encontrado views/layout.ejs';
+            fs.existsSync(path.join(PATH_ASSIGNMENT, "views", "layout.ejs")).should.be.equal(true);
+            this.msg_err = 'No se ha encontrado views/author.ejs';
+            fs.existsSync(path.join(PATH_ASSIGNMENT, "views", "author.ejs")).should.be.equal(true);
+            this.msg_err = 'No se ha encontrado public/images/foto.jpg';
+            fs.existsSync(path.join(PATH_ASSIGNMENT, "public", "images", "foto.jpg")).should.be.equal(true);
+        });
+
         let endpoint = '/';
         let code = 200;
         scored(`Comprobar que se resuelve una petición a ${endpoint} con código ${code} y que title y h1 son correctos`,
@@ -90,22 +100,23 @@ describe("Tests Práctica 6", function() {
                 .catch(check);
         });
 
-        scored(`Comprobar que se han añadido plantillas express-partials`, 1, async function () {
-            this.msg_ok = 'Se incluye layout.ejs';
-            this.msg_err = 'No se ha encontrado views/layout.ejs';
-            fs.existsSync(path.join(PATH_ASSIGNMENT, "views", "layout.ejs")).should.be.equal(true);
-        });
-
-        scored(`Comprobar que las plantillas express-partials tienen los componentes adecuados`,
-               2, async function () {
+        scored(`Comprobar el uso correcto de las plantillas express-partials`,
+               3, async function () {
             this.msg_ok = 'Se incluyen todos los elementos necesarios en la plantilla';
             this.msg_err = 'No se ha encontrado todos los elementos necesarios';
             let checks = {
                 "layout.ejs": {
-                    true: [/<%- body %>/g, /<header/, /<\/header>/, /<nav/, /<\/nav/, /<footer/, /<\/footer>/]
+                    true: [/<%- body %>/g, /<header/, /<\/header>/, /<nav/, /<\/nav/,  /<main/, /<\/main/, /<footer/, /<\/footer>/]
                 },
                 "index.ejs": {
-                    true: [/<h1/, /<\/h1>/, /<section/, /<\/section>/]
+                    true: [/<h1/, /<\/h1>/, /<section/, /<\/section>/],
+                    false: [/<body/, /<\/body>/, /<html/, /<\/html>/]
+                },
+                "error.ejs": {
+                    false: [/<body/, /<\/body>/, /<html/, /<\/html>/]
+                },
+                "author.ejs": {
+                    false: [/<body/, /<\/body>/, /<html/, /<\/html>/]
                 }
             };
 
@@ -115,7 +126,7 @@ describe("Tests Práctica 6", function() {
                     elements = checks[fpath][status];
                     for(var elem in elements){
                         let e = elements[elem];
-                        if (status) {
+                        if (status == 'true') {
                             this.msg_err = `${fpath} no incluye ${e}`;
                         } else {
                             this.msg_err = `${fpath} incluye ${e}, pero debería haberse borrado`;
