@@ -5,7 +5,7 @@
 
 # Práctica 6: Express CV
 
-Versión: 26 de Enero de 2024
+Versión: 21 de Marzo de 2025
 
 ## Objetivos
 * Afianzar los conocimientos obtenidos sobre el uso de Express para desarrollar servidores web.
@@ -226,8 +226,7 @@ Capturas a entregar con esta práctica:
 
 ## Instrucciones para la Entrega y Evaluación.
 
-Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#instrucciones-para-la-entrega-y-evaluaci%C3%B3n
-).
+Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/main/README.md#instrucciones-para-la-entrega-y-evaluaci%C3%B3n).
 
 ## Rúbrica
 
@@ -235,8 +234,7 @@ Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la
 
 - **20%:** Petición / con elementos adecuados title y h1
 - **15%:** Eliminar petición /users
-- **10%:** Existe el fichero views/layout.ejs
-- **20%:** Integracion de express-partials
+- **30%:** Uso correcto de las plantillas express-partials
 - **15%:** Petición /author
 - **20%:** Se muestra correctamente la foto 
 
