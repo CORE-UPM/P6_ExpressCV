@@ -234,9 +234,9 @@ Instrucciones [aquí](https://github.com/CORE-UPM/Instrucciones_Practicas/blob/m
 Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
 
 - **20%:** Petición / con elementos adecuados title y h1
-- **15%:** Eliminar petición /users
-- **30%:** Uso correcto de las plantillas express-partials
-- **15%:** Petición /author
+- **5%:** Funciona la petición /users
+- **35%:** Uso correcto de las plantillas express-partials
+- **20%:** Petición /author
 - **20%:** Se muestra correctamente la foto 
 
 

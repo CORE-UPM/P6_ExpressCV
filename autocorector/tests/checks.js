@@ -87,9 +87,9 @@ describe("Tests Práctica 6", function() {
         });
 
         endpoint1 = '/users';
-        code1 = 404;
+        code1 = 200;
         scored(`Comprobar que se resuelve una petición a ${endpoint1} con código ${code1}`,
-               1.5, async function () {
+               0.5, async function () {
             this.msg_ok = 'Respuesta correcta';
             this.msg_err = 'No hubo respuesta';
             check = function(){
@@ -101,7 +101,7 @@ describe("Tests Práctica 6", function() {
         });
 
         scored(`Comprobar el uso correcto de las plantillas express-partials`,
-               3, async function () {
+               3.5, async function () {
             this.msg_ok = 'Se incluyen todos los elementos necesarios en la plantilla';
             this.msg_err = 'No se ha encontrado todos los elementos necesarios';
             let checks = {
@@ -141,7 +141,7 @@ describe("Tests Práctica 6", function() {
         endpoint2 = '/author';
         code2 = 200;
         scored(`Comprobar que se resuelve una petición a ${endpoint2} con código ${code2}`,
-               1.5, async function () {
+               2, async function () {
             this.msg_ok = 'Respuesta correcta';
             this.msg_err = 'No hubo respuesta';
             check = function(){
