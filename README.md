@@ -5,7 +5,7 @@
 
 # Práctica 6: Express CV
 
-Versión: 21 de Marzo de 2025
+Versión: 3 de Abril de 2025
 
 ## Objetivos
 * Afianzar los conocimientos obtenidos sobre el uso de Express para desarrollar servidores web.
@@ -111,21 +111,8 @@ Se pide modificar el fichero principal que sirve el servidor:
 
 *Nota*: tenga en cuenta que cuando añada los marcos de la aplicación con express-partials puede que este test deje de pasar en el autocorector hasta que aplique los cambios necesarios en el paso correspondiente a los marcos.
 
-### Tarea 4 - Limpiar el esqueleto
 
-El esqueleto generado por **express** tiene algunos elementos que no queremos usar, por lo que vamos a hacer limpieza. 
-Concretamente vamos a eliminar el recurso **user** creado por el esqueleto. 
-Este recurso podría ser el paso inicial para completar un servicio de gestión de usuarios, pero de momento no nos interesa y vamos a borrarlo.
-
-* Eliminar las rutas de user: El esqueleto creó el fichero **routes/users.js** con las definiciones de las rutas de usuarios. El alumno de borrar este fichero.
-* El fichero **routes/users.js** se carga y usa en **app.js**. El alumno debe buscar y eliminar las referencias a **routes/users.js**. Son las siguientes sentencias de app.js:
-
-```
-var usersRouter = require('./routes/users');
-app.use('/users', usersRouter);
-```
-
-### Tarea 5 - Crear el marco de aplicación
+### Tarea 4 - Crear el marco de aplicación
 
 Vamos a usar el paquete **express-partials** para crear un marco de aplicación común para nuestro proyecto. 
 El marco de aplicación proporciona la página HTML que se usará para mostrar cualquiera de las vistas del servidor.
@@ -183,7 +170,7 @@ el marco **views/layout.ejs**, usando un elemento HTML de tipo **\<section\>**.
 Elimine de **views/index.ejs** todos los elementos HTML que ya proporciona **views/layout.ejs**, y cree una sección **\<section\>** que 
 contenga solo el contenido específico de esta vista (el encabezado y el párrafo de bienvenida).
 
-### Tarea 6 - Crear los elementos MVC de la primitiva GET /author. 
+### Tarea 5 - Crear los elementos MVC de la primitiva GET /author. 
 
 El alumno debe modificar el fichero **routes/index.js** para añadir la nueva ruta para **GET /author**.
 
