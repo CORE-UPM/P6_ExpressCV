@@ -9,9 +9,9 @@
         "githubURL": "CORE-UPM/P6_ExpressCV",
         "serverUrl": "https://aat.dit.upm.es/",
         "courseId": "395",
-        "assignmentId": "8549"
+        "assignmentId": "41287"
     },
     "dependencies": {
-        "autocorector": "^3.2.2"
+        "autocorector": "^4.0.1"
     }
 }
