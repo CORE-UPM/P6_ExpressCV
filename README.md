@@ -5,11 +5,17 @@
 
 # Práctica 6: Express CV
 
-Versión: 3 de Abril de 2025
+Versión: 28 de Enero de 2026
 
 ## Objetivos
 * Afianzar los conocimientos obtenidos sobre el uso de Express para desarrollar servidores web.
 * Aprender a completar en el esqueleto una aplicación de servidor basada en MVC (Modelo-Vista-Controlador) con vistas parciales EJS.
+
+## Dependencias
+
+Para realizar la práctica el alumno deberá tener instalado en su ordenador:
+- Herramienta GIT para gestión de repositorios [Github](https://git-scm.com/downloads)
+- Entorno de ejecución de javascript [NodeJS](https://nodejs.org/es/download/) versión 22.
 
 ## Descripción de la práctica
 
